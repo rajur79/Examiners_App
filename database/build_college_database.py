@@ -11,7 +11,7 @@ connection.execute("CREATE TABLE college(collegeId int not null, managementText 
 
 
 filename='data'+os.sep+'colleges.txt'
-with open(filename, 'r') as file:
+with open(filename, 'r', encoding="utf8") as file:
 	data = file.read()
 	obj = json.loads(data)
 	for v in obj:

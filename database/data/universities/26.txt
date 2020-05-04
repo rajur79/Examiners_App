@@ -1,0 +1,1 @@
+[{"label":"Berhampur University","value":85},{"label":"Fakir Mohan Univeristy, Balasore","value":935},{"label":"KIIT University (Deemed), Bhubaneswar","value":370},{"label":"Sambalpur University","value":589},{"label":"Siksha O Anusandhan University,Bhubaneswar","value":649},{"label":"Utkal University","value":839}]

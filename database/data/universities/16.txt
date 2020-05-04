@@ -1,0 +1,1 @@
+[{"label":"Deemed University, Jammu & Kashmir","value":169},{"label":"Jammu University","value":313},{"label":"Kashmir University","value":355},{"label":"Sher E Kashmir Institute of Medical Sciences (Deemed University), Srinagar","value":634}]

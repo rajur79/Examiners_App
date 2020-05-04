@@ -1,0 +1,1 @@
+[{"label":"Adesh University, Bathinda","value":8},{"label":"Baba Farid University of Health Sciences,Faridkot","value":63},{"label":"Guru Nanak Dev University","value":240},{"label":"Panjab University","value":523},{"label":"Postgraduate Institute of Medical Education & Research, Chandigarh","value":1045},{"label":"Punjabi University","value":550}]

@@ -1,0 +1,1 @@
+[{"label":"Guru Ghasidas University","value":238},{"label":"Pt. Deendayal Upadhyay Memorial Health Sciences and Ayush University, Raipur","value":58}]

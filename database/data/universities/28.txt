@@ -1,0 +1,1 @@
+[{"label":"JIPMER, Puducherry","value":336},{"label":"Pondicherry University","value":540},{"label":"Sri Balaji Vidyapeeth (Deemed University), Pondicherry ","value":666},{"label":"Statutory Autonomous, Puducherry","value":686},{"label":"Vinayaka Missions University (Deemed), Salem","value":849}]

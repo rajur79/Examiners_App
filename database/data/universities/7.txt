@@ -1,0 +1,1 @@
+[{"label":"Punjab University","value":548},{"label":"Statutory Autonomous, Chandigarh","value":685}]

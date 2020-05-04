@@ -1,0 +1,1 @@
+[{"label":"Himachal Pradesh University","value":267},{"label":"Maharishi Marakandeshwar University, Kumarhatti, Solan","value":422}]

@@ -1,0 +1,1 @@
+[{"label":"Kolhan University, Chaibasa","value":378},{"label":"Ranchi University","value":559},{"label":"Sidho Kanhu Murmu University","value":2089},{"label":"Vinoba Bhave University","value":851}]

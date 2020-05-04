@@ -1,0 +1,1 @@
+[{"label":"Rajiv Gandhi University","value":934},{"label":"Rajiv Gandhi University, Arunanchal Pradesh","value":1049}]

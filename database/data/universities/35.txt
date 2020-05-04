@@ -1,0 +1,1 @@
+[{"label":"Burdwan University","value":102},{"label":"Calcutta University","value":106},{"label":"University of North Bengal","value":808},{"label":"West Bengal Medical Faculty","value":869},{"label":"West Bengal University of Health Sciences,Kolkata","value":870}]

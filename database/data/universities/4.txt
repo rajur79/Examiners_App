@@ -1,0 +1,1 @@
+[{"label":"Assam University","value":51},{"label":"Dibrugarh University","value":175},{"label":"Gauhati University","value":207},{"label":"Srimanta Shankardeva University of Health Sciences","value":672}]

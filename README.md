@@ -2,5 +2,7 @@
 Application to manage Examiners
 
 Contributors:
-    Raju RamaKrishna
-    Diya Raju
+
+Raju Ramakrishna
+
+Diya Raju

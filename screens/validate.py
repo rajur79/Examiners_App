@@ -7,6 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 import sqlite3
+import os
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -15,7 +16,7 @@ class Ui_SignUp_Form(object):
         reg_num = self.reg_num.text()
         first_name = '%'+self.first_name.text().upper()+'%'
 
-        connection = sqlite3.connect("../database/login.db")
+        connection = sqlite3.connect(".."+os.sep+"database"+os.sep+"login.db")
         result = connection.execute("SELECT * FROM examiners WHERE reg_no = ? AND upper(examiner_name) like ?",(reg_num,first_name))
         if(len(result.fetchall()) > 0):
              print("User found")

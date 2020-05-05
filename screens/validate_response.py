@@ -8,9 +8,18 @@
 
 import os
 from PyQt5 import QtCore, QtGui, QtWidgets
+from register import Ui_SignUp_Form
 
 
 class Ui_MainWindow(object):
+
+    def registerNow(self):
+        self.welcomeWindow = QtWidgets.QMainWindow()
+        self.ui = Ui_SignUp_Form()
+        self.ui.setupUi(self.welcomeWindow)
+        self.welcomeWindow.show()        
+
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(402, 575)
@@ -99,6 +108,9 @@ class Ui_MainWindow(object):
         self.Next_btn = QtWidgets.QPushButton(self.frame)
         self.Next_btn.setGeometry(QtCore.QRect(210, 490, 91, 31))
         self.Next_btn.setObjectName("Next_btn")
+
+        self.Next_btn.clicked.connect(self.registerNow)
+
         self.newmem_label = QtWidgets.QLabel(self.frame)
         self.newmem_label.setGeometry(QtCore.QRect(50, 80, 231, 31))
         self.newmem_label.setObjectName("newmem_label")
@@ -110,7 +122,6 @@ class Ui_MainWindow(object):
         self.toolButton.setIconSize(QtCore.QSize(123, 123))
         self.toolButton.setObjectName("toolButton")
         self.uname_label = QtWidgets.QPlainTextEdit(self.frame)
-        #self.uname_label.setGeometry(QtCore.QRect(120, 300, 91, 16))
         self.uname_label.move(10, 120)
         self.uname_label.setObjectName("uname_label")
         MainWindow.setCentralWidget(self.centralwidget)

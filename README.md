@@ -3,8 +3,8 @@ Application to manage Examiners
 
 Contributors:
 
-Raju Ramakrishna
+  Raju Ramakrishna
 
-Dr. Prakash R
+  Dr. Prakash R
 
-Diya Raju
+  Diya Raju

@@ -9,6 +9,7 @@
 import sqlite3
 import os
 from PyQt5 import QtCore, QtGui, QtWidgets
+from validate_response import Ui_MainWindow
 
 
 class Ui_SignUp_Form(object):
@@ -17,15 +18,39 @@ class Ui_SignUp_Form(object):
         first_name = '%'+self.first_name.text().upper()+'%'
 
         connection = sqlite3.connect(".."+os.sep+"database"+os.sep+"login.db")
-        result = connection.execute("SELECT * FROM examiners WHERE reg_no = ? AND upper(examiner_name) like ?",(reg_num,first_name))
-        if(len(result.fetchall()) > 0):
+        result = connection.execute("SELECT examiner_name, designation, council, department, college FROM examiners WHERE reg_no = ? AND upper(examiner_name) like ? order by row_num desc limit 1",(reg_num,first_name))
+        data = result.fetchall()
+        if(len(data) > 0):
              print("User found")
-             #self.welcomeWindow = QtWidgets.QMainWindow()
-             #self.ui = Ui_MainWindow()
-             #self.ui.setupUi(self.welcomeWindow)
-             #self.welcomeWindow.show()
+             f = open("user_cookie.db", "w")
+             for row in data:
+                examiner_name=row[0].strip()
+                designation=row[1].strip()
+                council=row[2].strip()
+                department=row[3].strip()
+                college=row[4].strip()
+
+                f.write("Examiner: "+ examiner_name)
+                f.write("\n")
+                f.write("Designation: "+ designation)
+                f.write("\n")
+                f.write("Council: "+ council)
+                f.write("\n")
+                f.write("Department: "+ department)
+                f.write("\n")
+                f.write("College: "+ college)
+                f.write("\n")
+             f.close()
         else:
              print("User not Found") 
+             f = open("user_cookie.db", "w")
+             f.write("error")
+             f.close()
+
+        self.welcomeWindow = QtWidgets.QMainWindow()
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self.welcomeWindow)
+        self.welcomeWindow.show()
 
     def setupUi(self, SignUp_Form):
         SignUp_Form.setObjectName("SignUp_Form")

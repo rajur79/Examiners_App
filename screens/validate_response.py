@@ -8,14 +8,14 @@
 
 import os
 from PyQt5 import QtCore, QtGui, QtWidgets
-from register import Ui_SignUp_Form
+from register import Ui_Register_Form
 
 
 class Ui_MainWindow(object):
 
     def registerNow(self):
         self.welcomeWindow = QtWidgets.QMainWindow()
-        self.ui = Ui_SignUp_Form()
+        self.ui = Ui_Register_Form()
         self.ui.setupUi(self.welcomeWindow)
         self.welcomeWindow.show()        
 

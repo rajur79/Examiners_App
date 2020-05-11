@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>SignUp_Form</class>
- <widget class="QWidget" name="SignUp_Form">
+ <class>Validate_Form</class>
+ <widget class="QWidget" name="Validate_Form">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -30,7 +30,7 @@ QFrame
 background-color:#333;
 border-radius:15px;
 }
-#SignUp_Form{
+#Validate_Form{
 background:url(:/newPrefix/Blue.jpg);
 }
 
@@ -88,10 +88,10 @@ border-bottom:1px solid#717072;
   <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>20</y>
+     <x>30</x>
+     <y>120</y>
      <width>341</width>
-     <height>531</height>
+     <height>391</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -104,7 +104,7 @@ border-bottom:1px solid#717072;
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>0</y>
+      <y>110</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -122,24 +122,24 @@ border-bottom:1px solid#717072;
      <enum>Qt::PlainText</enum>
     </property>
    </widget>
-   <widget class="QPushButton" name="Next_btn">
+   <widget class="QPushButton" name="enter_btn">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>490</y>
+      <x>180</x>
+      <y>330</y>
       <width>91</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Next</string>
+     <string>Enter</string>
     </property>
    </widget>
    <widget class="QLabel" name="newmem_label">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>50</y>
+      <x>30</x>
+      <y>150</y>
       <width>171</width>
       <height>31</height>
      </rect>
@@ -152,42 +152,267 @@ border-bottom:1px solid#717072;
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>100</y>
+      <y>240</y>
       <width>231</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Registration Number</string>
+     <string/>
     </property>
     <property name="placeholderText">
-     <string>Full Name</string>
+     <string>Registration Number</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="first_name">
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>150</y>
+      <y>290</y>
       <width>231</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>First Name</string>
+     <string/>
     </property>
     <property name="placeholderText">
-     <string>Full Name</string>
+     <string>First Name</string>
     </property>
+   </widget>
+   <widget class="QComboBox" name="council_comboBox">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>190</y>
+      <width>231</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Andhra Pradesh Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Arunachal Pradesh Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Assam Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bareilly Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bihar Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bombay Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Chandigarh Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Chattisgarh Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Delhi Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Dental Council of India</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Goa Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Gujarat Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Haryana Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Himanchal Pradesh Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Hyderabad Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Jammu &amp; Kashmir Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Karnataka Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Kerala Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Madhya Pradesh Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Madras Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mahakoshal Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Manipur Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Medical Council of India</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mizoram Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mysore Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Nagaland Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Nepal Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Orissa Council of Medical Registration</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Others</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Pondicherry Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Punjab Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Rajasthan Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Sikkim Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Tamil Nadu Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Telangana State Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Travancore Cochin Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Travancore Cochin Medical Council, Trivandrum</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Tripura State Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Uttar Pradesh Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Uttarakhand Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Vidharba Medical Council</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>West Bengal Medical Council</string>
+     </property>
+    </item>
    </widget>
   </widget>
   <widget class="QToolButton" name="toolButton">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>10</y>
-     <width>81</width>
-     <height>61</height>
+     <x>110</x>
+     <y>30</y>
+     <width>181</width>
+     <height>181</height>
     </rect>
    </property>
    <property name="text">

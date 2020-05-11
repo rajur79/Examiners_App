@@ -35,6 +35,8 @@ class Ui_Validate_Form(object):
 
                 f.write("ID: "+ str(row_num))
                 f.write("\n")
+                f.write("Reg Num: "+ reg_num)
+                f.write("\n")
                 f.write("Examiner: "+ examiner_name)
                 f.write("\n")
                 f.write("Designation: "+ designation)

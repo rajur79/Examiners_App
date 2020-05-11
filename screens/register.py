@@ -15,6 +15,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Register_Form(object):
 
     row_num=0
+    fname=""
+    reg_num=""
 
     def submitCheck(self):
         registrationnumber = self.reg_lineEdit.text()
@@ -137,32 +139,25 @@ class Ui_Register_Form(object):
         self.newmem_label.setGeometry(QtCore.QRect(20, 100, 171, 31))
         self.newmem_label.setObjectName("newmem_label")
 
-        self.reg_lineEdit = QtWidgets.QLineEdit(self.frame)
-        self.reg_lineEdit.setGeometry(QtCore.QRect(60, 140, 231, 20))
-        self.reg_lineEdit.setText("")
-        self.reg_lineEdit.setObjectName("reg_lineEdit")
-        
-        self.first_name_lineEdit = QtWidgets.QLineEdit(self.frame)
-        self.first_name_lineEdit.setGeometry(QtCore.QRect(60, 180, 231, 20))
-        self.first_name_lineEdit.setText("")
-        self.first_name_lineEdit.setObjectName("first_name_lineEdit")
-        
-        self.user_lineEdit = QtWidgets.QLineEdit(self.frame)
-        self.user_lineEdit.setGeometry(QtCore.QRect(60, 220, 231, 20))
-        self.user_lineEdit.setText("")
-        self.user_lineEdit.setObjectName("user_lineEdit")
+        self.regnum_label = QtWidgets.QLabel(self.frame)
+        self.regnum_label.setGeometry(QtCore.QRect(60, 180, 231, 20))
+        self.regnum_label.setObjectName("regnum_label")
+
+        self.fname_label = QtWidgets.QLabel(self.frame)
+        self.fname_label.setGeometry(QtCore.QRect(60, 220, 231, 20))
+        self.fname_label.setObjectName("fname_label")
+
+        self.email_lineEdit = QtWidgets.QLineEdit(self.frame)
+        self.email_lineEdit.setGeometry(QtCore.QRect(60, 260, 231, 20))
+        self.email_lineEdit.setText("")
+        self.email_lineEdit.setObjectName("email_lineEdit")
 
         self.pass_lineEdit = QtWidgets.QLineEdit(self.frame)
-        self.pass_lineEdit.setGeometry(QtCore.QRect(60, 260, 231, 20))
+        self.pass_lineEdit.setGeometry(QtCore.QRect(60, 300, 231, 20))
         self.pass_lineEdit.setText("")
         self.pass_lineEdit.setEchoMode(QtWidgets.QLineEdit.Password)
         self.pass_lineEdit.setObjectName("pass_lineEdit")
-        
-        self.email_lineEdit = QtWidgets.QLineEdit(self.frame)
-        self.email_lineEdit.setGeometry(QtCore.QRect(60, 300, 231, 20))
-        self.email_lineEdit.setText("")
-        self.email_lineEdit.setObjectName("email_lineEdit")
-        
+                
         self.mobile_lineEdit = QtWidgets.QLineEdit(self.frame)
         self.mobile_lineEdit.setGeometry(QtCore.QRect(60, 340, 231, 20))
         self.mobile_lineEdit.setText("")
@@ -180,15 +175,26 @@ class Ui_Register_Form(object):
         QtCore.QMetaObject.connectSlotsByName(Register_Form)
 
     def retranslateUi(self, Register_Form):
+
+        f = open('user_cookie.db', 'r')
+        for line in f:
+            if line.startswith("ID:"):
+                Ui_Register_Form.row_num=line.split("ID: ")[1]
+                print("row_num:" +Ui_Register_Form.row_num)
+            elif line.startswith("Examiner:"):
+                Ui_Register_Form.fname=line.split("Examiner: ")[1]
+                print("fname: "+Ui_Register_Form.fname)
+            elif line.startswith("Reg Num:"):
+                Ui_Register_Form.reg_num=line.split("Reg Num: ")[1]
+
         _translate = QtCore.QCoreApplication.translate
         Register_Form.setWindowTitle(_translate("Register_Form", "Form"))
         self.heading_label.setText(_translate("Register_Form", "EXAMINERS"))
         self.newmem_label.setText(_translate("Register_Form", "Registration"))
-        self.reg_lineEdit.setPlaceholderText(_translate("Register_Form", "Registration Number"))
-        self.first_name_lineEdit.setPlaceholderText(_translate("Register_Form", "First Name"))
-        self.user_lineEdit.setPlaceholderText(_translate("Register_Form", "Username"))
-        self.pass_lineEdit.setPlaceholderText(_translate("Register_Form", "Password"))
+        self.regnum_label.setText(_translate("Register_Form", "Reg Num : " +Ui_Register_Form.reg_num))
+        self.fname_label.setText(_translate("Register_Form", "Name: " +Ui_Register_Form.fname))
         self.email_lineEdit.setPlaceholderText(_translate("Register_Form", "Email"))
+        self.pass_lineEdit.setPlaceholderText(_translate("Register_Form", "Password"))
         self.mobile_lineEdit.setPlaceholderText(_translate("Register_Form", "Mobile Number"))
         self.submit_btn.setText(_translate("Register_Form", "Submit"))
         self.toolButton.setText(_translate("Register_Form", "..."))

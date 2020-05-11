@@ -19,16 +19,13 @@ class Ui_Register_Form(object):
     reg_num=""
 
     def submitCheck(self):
-        registrationnumber = self.reg_lineEdit.text()
-        firstname = '%'+self.first_name_lineEdit.text().upper()+'%'
-        username = self.user_lineEdit.text()
         password = self.pass_lineEdit.text()
         email = self.email_lineEdit.text()        
         mobile = self.mobile_lineEdit.text()
 
         connection = sqlite3.connect(".."+os.sep+"database"+os.sep+"login.db")
 
-        connection.execute("Insert into login values (?,?,?,?,?,?,?,?)",(registrationnumber, firstname, username, password, email, mobile, datetime.datetime.now(), datetime.datetime.now()))
+        connection.execute("Insert into login values (?,?,?,?,?,?)",(Ui_Register_Form.row_num, email, password, mobile, datetime.datetime.now(), datetime.datetime.now()))
         connection.commit()
 
         result = connection.execute("SELECT * FROM LOGIN")
@@ -180,10 +177,8 @@ class Ui_Register_Form(object):
         for line in f:
             if line.startswith("ID:"):
                 Ui_Register_Form.row_num=line.split("ID: ")[1]
-                print("row_num:" +Ui_Register_Form.row_num)
             elif line.startswith("Examiner:"):
                 Ui_Register_Form.fname=line.split("Examiner: ")[1]
-                print("fname: "+Ui_Register_Form.fname)
             elif line.startswith("Reg Num:"):
                 Ui_Register_Form.reg_num=line.split("Reg Num: ")[1]
 
